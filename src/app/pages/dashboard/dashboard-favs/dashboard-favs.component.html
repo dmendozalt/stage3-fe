@@ -1,0 +1,39 @@
+<h3 class="movie__header">Favorites</h3>
+<div class="movie__table-container">
+    <table class="movie__table">
+        <thead class="movie__table-header">
+            <th>Poster</th>
+            <th>Title</th>
+            <th>Type</th>
+            <th>Year</th>
+            <th>Comments</th>
+            <th>Date</th>
+            <th>Action</th>
+        </thead>
+        <tr *ngFor="let movie of favMovies">
+            <td class="movie__poster">
+                <img class="movie__image" [src]="movie.poster">
+            </td>
+            <td>
+                {{movie.title}}
+            </td>
+            <td>
+                {{movie.type}}
+            </td>
+            <td>
+                {{movie.year}}
+            </td>
+            <td>
+                {{movie.comments}}
+            </td>
+            <td>
+                {{movie.favoriteLog | date:'HH:mm:ss'}}
+            </td>
+            <td>
+                <button (click)="deleteFav(movie.id)" mat-icon-button color="warn">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </td>
+        </tr>
+    </table>
+</div>

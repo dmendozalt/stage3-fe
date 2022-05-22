@@ -1,0 +1,7 @@
+<section class="dashboard__container">
+    <app-dashboard-form class="dashboard__form" (searchMovieEvent)="loadMovies($event)"></app-dashboard-form>
+    <app-dashboard-table class="dashboard__table" [movieDataSource]="moviesResult" (addFavMovie)="addFavMovie($event)">
+    </app-dashboard-table>
+    <app-dashboard-favs class="dashboard__favs" [favMovies]="favMovies" (deleteFavMovie)="deleteMovie($event)">
+    </app-dashboard-favs>
+</section>

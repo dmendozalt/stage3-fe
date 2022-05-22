@@ -1,0 +1,29 @@
+<h3 class="movie__header">Search results</h3>
+<div class="movie__table-container">
+    <form [formGroup]="movieResultsForm">
+        <div formArrayName="movies" *ngFor="let movie of getMovieForms.controls;let i=index">
+            <div class="movie__form" [formGroupName]="i">
+                <img class="movie__image" [src]="movie.value.poster">
+                <mat-form-field appearance="fill">
+                    <mat-label>Title</mat-label>
+                    <input matInput type="text" formControlName="title" />
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Type</mat-label>
+                    <input matInput type="text" formControlName="type" />
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Year</mat-label>
+                    <input matInput type="text" formControlName="year" />
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Comments</mat-label>
+                    <textarea matInput type="text" formControlName="comments"></textarea>
+                </mat-form-field>
+                <button (click)="favMovie(i)" mat-icon-button class="movie__button--yellow">
+                    <mat-icon>star</mat-icon>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

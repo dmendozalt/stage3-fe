@@ -1,0 +1,22 @@
+.movie {
+    &__header {
+        text-align: center;
+    }
+    &__table-container {
+        overflow: auto;
+        height: 70vh;
+    }
+    &__image {
+        width: 100%;
+    }
+    &__button--yellow {
+        color: #ffd700;
+    }
+    &__form {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+}

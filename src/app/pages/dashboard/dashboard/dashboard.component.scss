@@ -1,0 +1,23 @@
+.dashboard {
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+    &__form {
+        margin-top: 10px;
+        grid-area: 1 / 2 / 2 / 6;
+    }
+    &__table {
+        margin: 0 auto;
+        grid-area: 2 / 1 / 6 / 4;
+        width: 95%;
+    }
+    &__favs {
+        margin: 0 auto;
+        grid-area: 2 / 4 / 6 / 7;
+        width: 95%;
+    }
+}

@@ -1,0 +1,13 @@
+.form {
+    &__container {
+        width: 100%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+    &__button {
+        margin-bottom: 10px;
+    }
+}
